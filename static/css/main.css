@@ -1,0 +1,93 @@
+.textArea1 {
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+    width: 40%;
+    float: Left;
+}
+
+.textArea2 {
+    margin-top: 4%;
+    margin-right: 4%;
+    margin-bottom: 5%;
+    float: right;
+    width: 40%;
+}
+
+.navbarBtn {
+    color: cadetblue;
+    font-family: cursive;
+    font-size: 110%;
+}
+
+.footContainer {
+    background-color: #333;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.generateButton {
+    background-color: #333;
+    width: 20%;
+    font-family: cursive;
+    font-size: 185%;
+}
+
+.iconSize {
+    width: 2%;
+    height: 2%;
+}
+
+.iconSize:hover {
+    transform: scale(1.5);
+}
+
+.smallHeading {
+    color: aliceblue;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: cursive;
+}
+
+.bgPanel {
+    background-color: #000333;
+    text-align: center;
+    opacity: 75%;
+}
+
+.cropped1 {
+    width: 38%;
+    height: 180%;
+    margin-top: -2%;
+    object-fit: cover;
+}
+
+
+.appTitle {
+    font-size: 185%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: peru;
+}
+
+.listElement{
+    margin-top: 2%;
+    background-color: white;
+    color: #432;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
