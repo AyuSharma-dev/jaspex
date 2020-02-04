@@ -33,7 +33,7 @@ def getApexCode(inputJson):
         apex += writeNumber(y)
     elif type(y) is bool:
         apex += writeBoolean(y)
-
+    apex += '   return gen;\n'
     return apex + '}'
 
 
