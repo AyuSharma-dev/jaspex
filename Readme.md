@@ -2,7 +2,7 @@
 # ![Alt text](static/images/logoNav.PNG?raw=true "Title")
 >This repository is for the Online Json to <a href="https://jaspex.herokuapp.com/">Apex conversion tool</a>.
 
->This tool Converts hardcoded JSON into the Apex JSON Generator Class code.
+>This tool Converts JSON into the Apex JSON Generator Class code.
 
 ---
 
@@ -17,7 +17,7 @@
 - Copy your apex method.
 >
 
-  ![Recordit GIF](http://g.recordit.co/xcx4jUREqn.gif)
+  ![Recordit GIF](http://g.recordit.co/AKHlAyRSLv.gif)
 
 >
 - Paste it inside your class and call it inside your logic.
