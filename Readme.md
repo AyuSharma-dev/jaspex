@@ -53,5 +53,5 @@ Reach out to me at one of the following places!
 
 ---
 
-#License
+# License
 - <a href="http://opensource.org/licenses/mit-license.php" >MIT license</a>  
