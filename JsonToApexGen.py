@@ -7,10 +7,10 @@ def getApexCode(inputJson):
     apex = "public JSONGenerator getJsonGen(){\n"
     apex += "    JSONGenerator gen = JSON.createGenerator(true);\n"
     print( type(inputJson) )
-    #try:
-    y = loads(inputJson)
-   # except ValueError as err:
-    #    return 'Error in Json decoding, please check.'+ str(err.__str__)
+    try:
+        y = loads(inputJson)
+    except ValueError as err:
+        return 'Error in Json decoding, please check.'
     if type(y) is list:
         apex += startingArray
         if len(y) > 0 and (type(y[0]) is dict):
