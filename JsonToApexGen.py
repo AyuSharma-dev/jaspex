@@ -1,5 +1,6 @@
 from json import loads
 from utilities import *
+from re import sub
 
 
 # This method starts the code running
@@ -34,7 +35,7 @@ def getApexCode(inputJson):
         apex += writeNumber(y)
     elif type(y) is bool:
         apex += writeBoolean(y)
-    apex += '   return gen;\n'
+    apex += '    return gen;\n'
     return apex + '}'
 
 
@@ -78,3 +79,12 @@ def funToCheck(j):
             apex += writeNullField(x)
 
     return apex
+
+def parseQuotedJson( jsonBody ):
+    jsonBody = jsonBody.strip()
+    if(jsonBody.startswith("'")):
+        jsonBody = jsonBody[1:]
+        if( jsonBody.endswith("'") ):
+            jsonBody = jsonBody[:-1]
+            jsonBody = sub("['+  ']", "", jsonBody)
+    return jsonBody
