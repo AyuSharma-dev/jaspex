@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="English">
+
+<head>
+    <title>Quoted JSON</title>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="Kb70at8PUa2CXaXgSnNqB_SQIujBTq2H4N3OQAOI7Q0">
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: #5cdb95;">
+    <div style="color: #432!important;">
+        <div style="width: 100%;text-align: center;margin-bottom: 3%;">
+            <div class="well well-sm bgPanel">
+                <h1 class="smallHeading">
+                    Quoted JSON
+                </h1>
+            </div>
+            <div class="well well-sm bgPanel">
+                <h3 class="smallHeading">
+                    If you are already using JSON as a string in your code for e.g.
+                </h3>
+            </div>
+            <div class="form-group well" style="text-align:center;margin-top: 4%;margin-bottom: 3%;background-color: #5cdb95;">
+                {{ form.exampleJson(readonly=true, Id='codeText', class_='form-control', style='width: 50%; resize: none; font-size: 130%; align-self: center; color: violet; display: block; margin-left: auto; margin-right: auto; background: black;') }}
+            </div>
+            <div class="well well-sm bgPanel">
+                <h3 class="smallHeading">
+                    Then mark checkbox True and do the rest as same. We will parse and convert this JSON.
+                </h3>
+            </div>
+        </div>
+
+        <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+    </div>
+</body>
+
+
+
+</html>
