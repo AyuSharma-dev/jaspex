@@ -17,11 +17,14 @@
     </style>
     <script>
         function copy() {
-          let textarea = document.getElementById("codeText");
-          textarea.select();
-          document.execCommand("copy");
+            let textarea = document.getElementById("codeText");
+            textarea.select();
+            document.execCommand("copy");
 
         }
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
     <nav class="navbar navbar-inverse navbar-expand-lg navbar-fixed-top">
         <div class="container-fluid">
@@ -67,17 +70,22 @@
         </div>
         <form action="/" method="POST" class="form-group">
             {{ form.csrf_token }}
-            <div class="container" style="width: 100%;">
-                <div style="text-align:center;" class="form-group" >
+            <div class="container" style="width: 100%;position: relative;">
+                <div style="text-align:center;" class="form-group">
 
                 </div>
+                <div class="smallHeading" style="margin-left: 4%;color: #432;font-weight: bold;font-size:150%;">
+                    Quoted Json {{ form.quoted( style= 'transform:scale(1.5);' ) }} <a href="/quotedHelp" target="_blank"> ❓ </a>
+                </div>
+
                 <div class="row">
                     <div class="well col-sm-4 textArea1" style="text-align:center;">
                         <h3 class="smallHeading" style="color: #432;font-weight: bold;margin-bottom: 5%;">Paste you JSON here.</h3>
                         {{ form.jsonCode( class_='form-control', style='width: 100%;resize: none;') }}
                     </div>
                     <div class="well col-sm-4 textArea2" style="text-align:center;">
-                        <div><h3 class="smallHeading" style="color: #432;font-weight: bold;display: inline-block;margin-bottom: 5%;">Copy your Apex code from here! </h3><button class="btn" onclick="copy()" type="button" style="float: right;" ><i class="fa fa-copy"></i></button></div>
+                        <div>
+                            <h3 class="smallHeading" style="color: #432;font-weight: bold;display: inline-block;margin-bottom: 5%;">Copy your Apex code from here! </h3><button class="btn" onclick="copy()" type="button" style="float: right;"><i class="fa fa-copy"></i></button></div>
                         {{ form.apexCode(readonly=true, Id='codeText', class_='form-control', style='width: 100%;resize: none;') }}
                     </div>
                 </div>
