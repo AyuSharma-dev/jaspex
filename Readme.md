@@ -17,7 +17,7 @@
 - Copy your apex method.
 >
 
-  ![Conversion Tutorial](static\images\normalConversion.gif)
+  ![Conversion Tutorial](static/images/normalConversion.gif)
 
 >
 
@@ -25,7 +25,6 @@
 
 ---
 
----
 
 # _Other Features:_
 
@@ -33,9 +32,11 @@
 
 >
 
-  ![Quoted JSON Conversion](static\images\quoteConversion.gif) 
+  ![Quoted JSON Conversion](static/images/quoteConversion.gif) 
 
 >
+
+---
 
 # _JSON GENERATOR over JSON?_
 
