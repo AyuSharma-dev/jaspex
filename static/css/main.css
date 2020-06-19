@@ -28,7 +28,7 @@
 
 .navbarBtn {
     color: cadetblue;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 110%;
 }
 
@@ -42,7 +42,7 @@
 .generateButton {
     background-color: #333;
     width: 20%;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 185%;
 }
 
@@ -59,7 +59,7 @@
     color: aliceblue;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .bgPanel {
