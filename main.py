@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import TextAreaField, BooleanField
-from JsonToApexGen import getApexCode, parseQuotedJson
+from modules.JsonToApexGen import getApexCode, parseQuotedJson
 import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from json import loads
+from modules.constants import GEN_API_ENDPOINT, QUOTED_HELP_MSG
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
@@ -30,31 +31,18 @@ def home():
             form.apexCode.data = ''
     return render_template("home.html", form=form)
 
+
 @app.route('/quotedHelp', methods=['POST', 'GET'])
 def quotedJsonHelp():
     form = AForm()
-    form.exampleJson.data = '''
-
-
-            \'{"menu": {'+
-                '"id": "file",'+
-                '"value": "File",'+
-                '"popup": {'+
-                  '"menuitem": ['+
-                    '{"value": "New", "onclick": "CreateNewDoc()"},'+
-                    '{"value": "Open", "onclick": "OpenDoc()"},'+
-                    '{"value": "Close", "onclick": "CloseDoc()"}'+
-                  ']'+
-                '}'+
-            '}}\'
-            '''
+    form.exampleJson.data = QUOTED_HELP_MSG
     return render_template("tooltip.html", form=form)
 
-@app.route('/api/generateApexAPI', methods=['POST', 'GET'])
+
+@app.route(GEN_API_ENDPOINT, methods=['POST', 'GET'])
 def getApexFromAPI():
     jsonBody = request.json.get('Body')
     quotedJson = request.json.get('quoted')
-    #print( "quotedJson==>"+quotedJson )
     if str(jsonBody) != '':
         if(quotedJson):
             jsonBody = parseQuotedJson(str(jsonBody))
@@ -63,4 +51,4 @@ def getApexFromAPI():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='127.0.0.1',port=50000, debug=False)

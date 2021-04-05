@@ -1,17 +1,16 @@
 from json import loads
 from utilities import *
 from re import sub
-
+from modules.constants import GEN_STARTERS, QUOTED_HELP_MSG, JSON_ERROR
 
 # This method starts the code running
 def getApexCode(inputJson):
-    apex = "public JSONGenerator getJsonGen(){\n"
-    apex += "    JSONGenerator gen = JSON.createGenerator(true);\n"
+    apex = GEN_STARTERS
     print( type(inputJson) )
     try:
         y = loads(inputJson)
     except ValueError as err:
-        return 'Error in Json decoding, please check.'
+        return JSON_ERROR
     if type(y) is list:
         apex += startingArray
         if len(y) > 0 and (type(y[0]) is dict):
